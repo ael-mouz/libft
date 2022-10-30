@@ -74,11 +74,11 @@ OBJS = ft_strlen.o \
 		ft_itoa.o \
 		ft_memmove.o \
 
-$(NAME): $(OBJS)
-	$(AR) $@ $^
-
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
+
+$(NAME): $(OBJS)
+	$(AR) $@ $^
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: ael-mouz <ael-mouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 14:06:11 by ael-mouz          #+#    #+#             */
-/*   Updated: 2022/10/27 18:41:35 by ael-mouz         ###   ########.fr       */
+/*   Updated: 2022/10/29 11:53:26 by ael-mouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,3 @@ int	ft_atoi(const char *str)
 	}
 	return (tooolong(sign, number));
 }
-// int main()
-// {
-// 	printf(ft_atoi("%d", "9223372036854775807"));
-// 	printf(ft_atoi("%d", "9223372036854775807"));
-// }

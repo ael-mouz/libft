@@ -6,7 +6,7 @@
 /*   By: ael-mouz <ael-mouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 00:26:15 by ael-mouz          #+#    #+#             */
-/*   Updated: 2022/10/28 00:09:58 by ael-mouz         ###   ########.fr       */
+/*   Updated: 2022/10/30 01:07:05 by ael-mouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	if (n == 0)
 		return (ft_strdup("0"));
-	ptr = malloc(j + 1);
+	ptr = (char *)malloc(j + 1);
 	if (!ptr)
 		return (NULL);
 	if (n < 0)

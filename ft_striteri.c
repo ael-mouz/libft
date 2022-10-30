@@ -6,7 +6,7 @@
 /*   By: ael-mouz <ael-mouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:20:21 by ael-mouz          #+#    #+#             */
-/*   Updated: 2022/10/27 21:39:06 by ael-mouz         ###   ########.fr       */
+/*   Updated: 2022/10/30 00:29:34 by ael-mouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		return ;
 	while (s[i])
 	{
-		(*f)(i, s + i);
+		(*f)(i, &s[i]);
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ael-mouz <ael-mouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 11:08:40 by ael-mouz          #+#    #+#             */
-/*   Updated: 2022/10/22 23:33:29 by ael-mouz         ###   ########.fr       */
+/*   Updated: 2022/10/29 22:14:44 by ael-mouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,23 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	len_dst;
 	unsigned int	len_src;
-	unsigned int	j;
+	size_t			j;
+	size_t			i;
 
-	if (!dst && dstsize == 0)
-		return (0);
-	len_dst = ft_strlen(dst);
 	len_src = ft_strlen(src);
-	if (dstsize == 0)
-		return (len_src);
-	if (dstsize <= len_dst)
-		len_src = len_src + dstsize;
-	else
-		len_src = len_src + len_dst;
+	if (!dst && dstsize == 0)
+		return (dstsize + len_src);
+	len_dst = ft_strlen(dst);
+	if (dstsize == 0 || dstsize <= len_dst)
+		return (dstsize + len_src);
 	j = 0;
-	while (src[j] != '\0' && len_dst < dstsize - 1)
+	i = len_dst;
+	while (src[j] != '\0' && j < dstsize - len_dst - 1)
 	{
-		dst[len_dst] = src[j];
-		len_dst++;
+		dst[i] = src[j];
+		i++;
 		j++;
 	}
-	if (len_dst <= (dstsize - 1))
-		dst[len_dst] = '\0';
-	return (len_src);
+	dst[i] = '\0';
+	return (len_src + len_dst);
 }

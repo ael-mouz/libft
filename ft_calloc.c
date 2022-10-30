@@ -6,7 +6,7 @@
 /*   By: ael-mouz <ael-mouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 21:39:55 by ael-mouz          #+#    #+#             */
-/*   Updated: 2022/10/28 00:17:16 by ael-mouz         ###   ########.fr       */
+/*   Updated: 2022/10/29 22:32:31 by ael-mouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*ptr;
+	void			*ptr;
 
-	if (((count * size) / size) != count)
+	if ((count != 0) && (((count * size) / count) != size))
 		return (NULL);
-	ptr = malloc(count * size);
+	ptr = (void *)malloc(count * size);
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, count * size);
-	return (ptr);
+	return ((void *)ptr);
 }

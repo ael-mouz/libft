@@ -6,7 +6,7 @@
 /*   By: ael-mouz <ael-mouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:09:14 by ael-mouz          #+#    #+#             */
-/*   Updated: 2022/10/27 19:10:24 by ael-mouz         ###   ########.fr       */
+/*   Updated: 2022/10/29 21:46:16 by ael-mouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*char_src;
-	char	*char_dest;
-	size_t	i;
+	unsigned char	*char_src;
+	unsigned char	*char_dest;
+	size_t			i;
 
 	i = 0;
-	char_src = (char *)src;
-	char_dest = (char *)dst;
+	char_src = (unsigned char *)src;
+	char_dest = (unsigned char *)dst;
 	if (char_dest == char_src)
 		return (dst);
 	if (char_dest > char_src)

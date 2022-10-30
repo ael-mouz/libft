@@ -6,7 +6,7 @@
 /*   By: ael-mouz <ael-mouz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 00:01:40 by ael-mouz          #+#    #+#             */
-/*   Updated: 2022/10/22 23:33:34 by ael-mouz         ###   ########.fr       */
+/*   Updated: 2022/10/29 22:05:33 by ael-mouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	srcl;
 
 	i = 0;
-	srcl = 0;
-	while (src[srcl] != '\0')
-		srcl++;
+	srcl = ft_strlen(src);
 	if (dstsize > 0)
 	{
 		while (src[i] != '\0' && i < (dstsize - 1))
